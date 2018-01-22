@@ -1,9 +1,17 @@
+<!--
+author: jockchou
+head: http://pingodata.qiniudn.com/jockchou-avatar.jpg
+date: 2015-07-31
+title: 欢迎使用GitBlog
+tags: GitBlog
+images: http://pingodata.qiniudn.com/cube2.jpg
+category: GitBlog
+status: publish
+summary: GitBlog是一个简单易用的Markdown博客系统，它不需要数据库，没有管理后台功能，更新博客只需要添加你写好的Markdown文件即可。
+-->
+
 ## 一. 简介 ##
 GitBlog是一个简单易用的Markdown博客系统，它不需要数据库，没有管理后台功能，更新博客只需要添加你写好的Markdown文件即可。它摆脱了在线编辑器排版困难，无法实时预览的缺点，一切都交给Markdown来完成，一篇博客就是一个Markdown文件。同时也支持评论，代码高亮，数学公式，页面PV统计等常用功能。GitBlog提供了不同的主题样式，你可以根据自己的喜好配置，如果你想自己制作博客主题，也是非常容易的。GitBlog还支持整站静态导出，你完全可以导出整站静态网页部署到Github Pages。
-
-预览
-
-![screenshot](./screenshot.png)
 
 ## 二. 功能特点 ##
 
@@ -28,9 +36,7 @@ GitBlog是一个简单易用的Markdown博客系统，它不需要数据库，�
 
 ## 四. 环境要求 ##
 
-- PHP 5.2.4+ 
-- mbstring扩展支持 
-- php.ini开启short_open_tag = On 
+PHP 5.2.4+
 
 ## 五. 安装步骤 ##
 
@@ -67,14 +73,10 @@ GitBlog是一个简单易用的Markdown博客系统，它不需要数据库，�
 - [jockchou][22]
 - [GitBlog Doc][23]
 - [zxy][24]  
-- [ckeyer][25]
-- [江湖隐行客][26]
-- [liyu34][27]
-
 
 ## 九. 感谢 ##
 
-GitBlog的成长需要喜欢Markdown，喜欢写博客的各位亲们支持！感谢你们使用GitBlog，感激你们对Gitblog的良好建议和Bug反馈。
+GitBlog的成长需要喜欢Markdown，喜欢写博客的各位亲们支持！感谢你们使用GitBlog，感激你们对Gitblog的良好建议与Bug反馈。
 
 QQ群：`84692078`  
 作者邮箱：`164068300[AT]qq.com`    
@@ -97,10 +99,8 @@ QQ群：`84692078`
 
 
 [20]: http://blog.hiweeds.net
-[21]: http://xiaochengzi.gitblog.cn
+[21]: http://xiaochengzi.sinaapp.com
 [22]: http://jockchou.com
-[23]: https://github.com/jockchou/gitblogdoc
+[23]: http://github.com/jockchou/gitblogdoc
 [24]: http://zxy.link
-[25]: http://blog.ckeyer.com
-[26]: http://wangzugang.net
-[27]: http://liyu34.xyz
+
