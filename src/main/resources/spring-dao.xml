@@ -7,9 +7,9 @@
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url"
-                  value="jdbc:mysql://****:3306/WAIMAI?useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT%2B8"/>
-        <property name="username" value="***"/>
-        <property name="password" value="******"/>
+                  value="jdbc:mysql://81.70.153.203:3306/WAIMAI?useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT%2B8"/>
+        <property name="username" value="HMM"/>
+        <property name="password" value="4b1Ac02=757"/>
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -25,4 +25,8 @@
     <bean id="userAddrMapper" class="com.luosu.blog.mapper.UserAddrMapperImpl">
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
+    <bean id="userMapper" class="com.luosu.blog.mapper.UserMapperImpl">
+        <property name="sqlSession" ref="sqlSession"/>
+    </bean>
+
 </beans>
