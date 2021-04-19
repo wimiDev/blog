@@ -22,14 +22,11 @@ public class UserService {
         List<User> users = userMapper.findByEmail(email);
         User loginedUser = null;
         for (User usr: users) {
-            System.out.println(usr.getPwd());
-            if(usr.getPwd() == pwd){
+            if(usr.getPwd().equals(pwd)){
                 loginedUser = usr;
                 break;
             }
         }
-        System.out.println(pwd);
-        System.out.println(users);
         return loginedUser;
     }
 }
