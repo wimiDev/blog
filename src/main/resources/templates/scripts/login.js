@@ -12,7 +12,7 @@ var app = new Vue({
 
 
             // Make a request for a user with a given ID
-            axios.get('/login?email=12345&password=123456')
+            axios.get('http://localhost:8080/login?email=12345&password=123456')
               .then(function (response) {
                 // handle success
                 console.log(response);
