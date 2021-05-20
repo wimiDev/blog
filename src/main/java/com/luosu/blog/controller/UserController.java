@@ -1,7 +1,10 @@
 package com.luosu.blog.controller;
 
 import com.luosu.blog.entity.User;
+import com.luosu.blog.service.UserDetailsService;
 import com.luosu.blog.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 //这里的注解是RestController，不能写错不然路由找不到
 @RestController
 public class UserController {
+
+    @Autowired
+    UserDetailsService UDService;
     /**
      * 域名的根目录，然后返回的“index”会映射到
      * java/resources/templates/index.html文件。
@@ -32,14 +38,14 @@ public class UserController {
      */
     @GetMapping(path = "/login")
     public String login(@RequestParam String email, @RequestParam String password, Model model) {
-        User logedUser = UserService.loginByEmail(email, password);
+        UserDetails logedUser = UDService.loadUserByEmail(email, password);//UserService.loginByEmail(email, password);
         if (logedUser == null) {
             System.out.println("attempting to log in with the non-existed account");
             return "该用户不存在";
         } else {
 
-            User user = logedUser;
-            model.addAttribute("name", user.getName());
+            UserDetails user = logedUser;
+            model.addAttribute("name", user.getUsername());
             return "index";
         }
     }
